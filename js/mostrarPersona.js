@@ -8,6 +8,7 @@ export default function mostrarPersona(data){
         tr.setAttribute("id",`${persona.id}`);
         tr.setAttribute("class","tr");
         tr.innerHTML = `
+        <td>${persona.id}</td>
         <td>${persona.nombre}</td>
         <td>${persona.edad}</td>
         <td>${persona.sexo}</td>

@@ -32,3 +32,14 @@ export async function deletePersonas(tr,id){
 
     let del = await(await fetch(`${URL}/persona/${id}`,config)).json();
 }
+
+export async function ActualizarPersona(data,id) {
+
+    let config = {
+        method: 'PUT',
+        headers: headers,
+        body:JSON.stringify(data)
+    }
+
+    let act = await (await fetch(`${URL}/persona/${id}`,config)).json();
+}

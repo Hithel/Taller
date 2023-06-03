@@ -1,10 +1,16 @@
 {
   "persona": [
     {
-      "nombre": "Edward",
-      "edad": "12",
+      "nombre": "Hithel",
+      "edad": "20",
       "sexo": "Masculino",
       "id": 1
+    },
+    {
+      "nombre": "Mauricio",
+      "edad": "20",
+      "sexo": "Masculino",
+      "id": 2
     }
   ]
 }

@@ -1,9 +1,9 @@
-import {postPersonas,getPersona,deletePersonas} from "./peticiones.js"
-import {modalModificar} from "./modalActualizar.js"
+import {postPersonas,getPersona,deletePersonas,ActualizarPersona} from "./peticiones.js"
 
 let form = document.querySelector('#form');
 let btnListar = document.querySelector('#btnListar');
 let tbodyPersonas = document.querySelector('#tbodyPersonas');
+let formActualizar = document.querySelector('#formActualizar');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -40,7 +40,13 @@ tbodyPersonas.addEventListener('click', (e) => {
         tr.remove();
     }
     else if(accion === "Actualizar"){
-        modalModificar(tr,id);
+      formActualizar.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let data = Object.fromEntries(new FormData(e.target));
+
+        ActualizarPersona(data,id);
+      });
     }
 });
 
